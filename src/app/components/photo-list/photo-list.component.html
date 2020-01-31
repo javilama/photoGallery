@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-4 p-4" *ngFor="let photo of photo">
+        <div class="card card-photo" (click)="selectedCard(photo.img)">
+            <div class="card-header">
+                {{photo.name}}
+            </div>
+            <img [src]="'http://localhost:3000/photo/'+ photo.img" class="img-card-top w-100">
+            <div class="card-body">
+                <p>{{photo.detail}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- (click)="selectedCard(photo.id) -->
